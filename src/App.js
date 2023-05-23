@@ -1,5 +1,11 @@
+import BirthdaysList from "./components/BirthdaysList";
+
 function App() {
-  return <div>Hello</div>;
+  return (
+    <div id="app">
+      <BirthdaysList />
+    </div>
+  );
 }
 
 export default App;

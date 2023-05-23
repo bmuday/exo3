@@ -2,3 +2,28 @@ body {
   margin: 0;
   padding: 0;
 }
+
+#app {
+  margin: 50px auto;
+  padding: 30px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.birthday-container {
+  display: flex;
+}
+
+.infos-container {
+  display: flex;
+  flex-direction: column;
+}
