@@ -1,10 +1,12 @@
 const Birthday = ({ person }) => {
   return (
     <div className="birthday-container">
-      <img className="image" src={person.photo_url} alt={`${person.name}`} />
+      <div className="image-container">
+        <img className="image" src={person.photo_url} alt={`${person.name}`} />
+      </div>
       <div className="infos-container">
-        <p>{person.name}</p>
-        <p>{person.age}</p>
+        <p className="name">{person.name}</p>
+        <p className="age">{person.age} years old</p>
       </div>
     </div>
   );

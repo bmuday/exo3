@@ -4,7 +4,11 @@ body {
 }
 
 #app {
-  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
   padding: 30px;
 }
 
@@ -23,7 +27,34 @@ p {
   display: flex;
 }
 
+.image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 20px;
+}
+
 .infos-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+#clear-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#clear-button-container button {
+  padding: 10px;
+  background-color: rgb(226, 43, 83);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+#clear-button-container button:hover {
+  transform: scale(1.1);
 }

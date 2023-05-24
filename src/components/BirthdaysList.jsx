@@ -20,8 +20,11 @@ const BirthdaysList = () => {
     },
   ]);
 
+  const refreshPage = () => {
+    window.location.reload();
+  };
   const deletePersons = () => {
-    setPersons([]);
+    setPersons([]); // modifie le state persons
   };
   return (
     <div>
@@ -29,7 +32,13 @@ const BirthdaysList = () => {
       {persons.map((person) => (
         <Birthday person={person} />
       ))}
-      <button onClick={deletePersons}>Clear All</button>
+      <div id="clear-button-container">
+        {persons.length === 0 ? (
+          <button onClick={refreshPage}>Refresh Page</button>
+        ) : (
+          <button onClick={deletePersons}>Clear All</button>
+        )}
+      </div>
     </div>
   );
 };
