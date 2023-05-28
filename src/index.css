@@ -17,27 +17,38 @@ p {
 }
 
 .image {
-  width: 80px;
-  height: 80px;
+  width: 80%;
+  height: 80%;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .birthday-container {
   display: flex;
+  margin: 50px auto;
 }
 
 .image-container {
+  width: 100px;
+  height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-right: 20px;
+  align-items: center;
+  margin-right: 10px;
 }
 
 .infos-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+}
+
+#delete-button {
+  width: 60px;
+  padding: 5px;
+  background-color: rgb(226, 43, 83);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
 }
 
 #clear-button-container {
@@ -47,14 +58,16 @@ p {
 }
 
 #clear-button-container button {
-  padding: 10px;
-  background-color: rgb(226, 43, 83);
+  width: 60px;
+  padding: 5px;
+  background-color: black;
   color: white;
   border-radius: 5px;
   border: none;
   cursor: pointer;
 }
 
-#clear-button-container button:hover {
+#clear-button-container button:hover,
+#delete-button:hover {
   transform: scale(1.1);
 }

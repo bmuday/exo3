@@ -23,6 +23,12 @@ const BirthdaysList = () => {
   const refreshPage = () => {
     window.location.reload();
   };
+
+  const deletePerson = (name) => {
+    const newPersons = persons.filter((person) => person.name !== name);
+    setPersons(newPersons); // modifie le state persons
+  };
+
   const deletePersons = () => {
     setPersons([]); // modifie le state persons
   };
@@ -30,7 +36,7 @@ const BirthdaysList = () => {
     <div>
       <h2>{persons.length === 0 ? "No" : persons.length} Birthdays Today</h2>
       {persons.map((person) => (
-        <Birthday person={person} />
+        <Birthday person={person} deletePerson={deletePerson} />
       ))}
       <div id="clear-button-container">
         {persons.length === 0 ? (
